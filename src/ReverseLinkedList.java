@@ -8,20 +8,19 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-public class ReverseLinkedList {
+public class Solution {
     public ListNode reverseList(ListNode head) {
-        //head: 1 --> 2 --> null
-        ListNode prev = null;
-        ListNode current = head;
-        ListNode next = null;
-        while (current != null) {
-            next = current.next;
+        if (head == null)
+            return null;
             
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
+        if (head.next == null)
+            return head;
+            
+        ListNode p = reverseList(head.next);    
         
-        return prev;
+        head.next.next = head;
+        head.next = null;
+        
+        return p;
     }
 }
