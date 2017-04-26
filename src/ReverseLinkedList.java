@@ -8,7 +8,7 @@
  *     ListNode(int x) { val = x; }
  * }
  */
-public class Solution {
+public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {
         if (head == null)
             return null;
