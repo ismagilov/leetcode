@@ -13,19 +13,14 @@ public class ReorderList {
         if (head == null || head.next == null)
             return;
 
-        ListNode l = head.next;
-        int cnt = 0;
-        while (l != null) {
-            cnt++;
-            l = l.next;
+        ListNode fast = head, slow = head;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
 
-        l = head;
-        for (int i = 0; i < cnt / 2; i++)
-            l = l.next;
-
-        ListNode second = l.next;
-        l.next = null;
+        ListNode second = slow.next;
+        slow.next = null;
 
         second = reverse(second);
         
