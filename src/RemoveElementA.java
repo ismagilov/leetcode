@@ -1,5 +1,7 @@
 /**
 * https://leetcode.com/problems/remove-element
+* 
+* Skip elems equal to val, but copy non-equal to current end.
 */
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {
