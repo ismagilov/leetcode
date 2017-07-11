@@ -1,5 +1,7 @@
 /**
 * https://leetcode.com/problems/contains-duplicate
+*
+* Use hash table. Memory: O(N). Time: O(N).
 */
 public class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
