@@ -1,13 +1,13 @@
-Linked List Cycle
+import lib.ListNode;
 
 /**
  * https://leetcode.com/problems/linked-list-cycle 
  *
  * Definition for singly-linked list.
- * class ListNode {
+ * class lib.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode(int x) {
+ *     lib.ListNode next;
+ *     lib.ListNode(int x) {
  *         val = x;
  *         next = null;
  *     }

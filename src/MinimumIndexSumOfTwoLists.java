@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
+
 /**
 * https://leetcode.com/problems/minimum-index-sum-of-two-lists
 */

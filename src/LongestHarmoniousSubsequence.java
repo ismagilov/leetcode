@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
 * https://leetcode.com/problems/longest-harmonious-subsequence
 */

@@ -1,3 +1,9 @@
+import lib.TreeNode;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * https://leetcode.com/problems/average-of-levels-in-binary-tree 
  *

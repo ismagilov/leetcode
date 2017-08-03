@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 /**
 * https://leetcode.com/problems/guess-number-higher-or-lower
 * 
@@ -24,5 +26,13 @@ public class GuessNumberHigherOrLower extends GuessGame {
         }
         
         return guessed;
+    }
+}
+
+class GuessGame {
+    private final int answer = 10;
+
+    public int guess(int g) {
+        return Integer.valueOf(answer).compareTo(Integer.valueOf(g));
     }
 }

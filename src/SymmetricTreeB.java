@@ -1,3 +1,5 @@
+import lib.TreeNode;
+
 /**
  * https://leetcode.com/problems/symmetric-tree
  *

@@ -1,9 +1,11 @@
+import lib.ListNode;
+
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * public class lib.ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ *     lib.ListNode next;
+ *     lib.ListNode(int x) { val = x; }
  * }
  */
 public class RemoveDuplicatedFromSortedList {

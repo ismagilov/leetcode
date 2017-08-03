@@ -3,7 +3,7 @@
 * 
 * Skip elems equal to val, but copy non-equal to current end.
 */
-public class RemoveElement {
+public class RemoveElementA {
     public int removeElement(int[] nums, int val) {
         int last = -1;
         
