@@ -2,8 +2,10 @@ import java.util.HashMap;
 
 /**
  * https://leetcode.com/problems/word-pattern
+ *
+ * Look up word in O(N).
  */
-public class WordPattern {
+public class WordPatternA {
     public boolean wordPattern(String pattern, String str) {
         HashMap<Character, String> ps = new HashMap<>();
 
