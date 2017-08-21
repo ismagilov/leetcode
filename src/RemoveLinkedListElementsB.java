@@ -10,12 +10,9 @@ public class RemoveLinkedListElementsB {
         if (head == null)
             return null;
 
-        if (head.val == val)
-            return removeElements(head.next, val);
-
         head.next = removeElements(head.next, val);
 
-        return head;
+        return head.val == val ? head.next : head;
     }
 
     // 1 --> 2 --> 2 --> 3 --> null
