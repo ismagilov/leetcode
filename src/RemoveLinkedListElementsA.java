@@ -1,7 +1,7 @@
 import lib.ListNode;
 
 /**
- * @author Ilya Ismagilov <ilya@singulator.net>
+ * https://leetcode.com/problems/remove-linked-list-elements
  *
  * Iterative solution.
  */
