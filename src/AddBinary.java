@@ -1,5 +1,5 @@
 /**
- * @author Ilya Ismagilov <ilya@singulator.net>
+ * https://leetcode.com/problems/add-binary/
  */
 public class AddBinary {
     public String addBinary(String a, String b) {
