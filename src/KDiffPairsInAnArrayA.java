@@ -2,8 +2,11 @@ import java.util.HashSet;
 
 /**
 * https://leetcode.com/problems/k-diff-pairs-in-an-array/#/description
+*
+* Time: O(N)
+* Space: O(N)
 */ 
-public class KDiffPairsInAnArray {
+public class KDiffPairsInAnArrayA {
     public int findPairs(int[] nums, int k) {
         if (k < 0)
             return 0;
