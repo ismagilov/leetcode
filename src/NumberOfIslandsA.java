@@ -2,7 +2,7 @@
 /**
 * https://leetcode.com/problems/number-of-islands/description/
 *
-* BFS-based approach.
+* Depth first seach approach.
 */
 public class NumberOfIslandsA {
     private boolean[][] visited;
