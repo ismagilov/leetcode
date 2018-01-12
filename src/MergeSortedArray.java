@@ -23,7 +23,5 @@ public class MergeSortedArray {
             idx--;
             i2--;
         }
-            
-            System.arraycopy(nums2, 0, nums1, 0, i2 + 1);
     }
 }
