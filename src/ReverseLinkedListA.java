@@ -2,7 +2,9 @@ import lib.ListNode;
 
 /**
  * https://leetcode.com/problems/reverse-linked-list/
- * 
+ *
+ * Recursion approach.
+ *
  * Definition for singly-linked list.
  * public class lib.ListNode {
  *     int val;
@@ -10,7 +12,7 @@ import lib.ListNode;
  *     lib.ListNode(int x) { val = x; }
  * }
  */
-public class ReverseLinkedList {
+public class ReverseLinkedListA {
     public ListNode reverseList(ListNode head) {
         if (head == null)
             return null;
