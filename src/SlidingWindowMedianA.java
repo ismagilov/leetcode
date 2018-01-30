@@ -1,7 +1,9 @@
 /**
 * https://leetcode.com/problems/sliding-window-median/description/
+*
+* Non-optimal because of O(N) for PriorityQueue.remove(Object o).
 */
-public class SlidingWindowMedian {
+public class SlidingWindowMedianA {
     private PriorityQueue<Integer> left = new PriorityQueue<>(Comparator.reverseOrder());
     private PriorityQueue<Integer> right = new PriorityQueue<>();
 
