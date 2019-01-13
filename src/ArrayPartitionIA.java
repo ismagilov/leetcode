@@ -1,5 +1,7 @@
 /**
 * https://leetcode.com/problems/array-partition-i
+*
+* Use counting sort.
 */
 public class ArrayPartitionI {
     public int arrayPairSum(int[] nums) {
