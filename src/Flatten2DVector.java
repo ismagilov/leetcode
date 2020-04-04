@@ -1,10 +1,14 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
 * https://leetcode.com/problems/flatten-2d-vector/description/
 */
 public class Flatten2DVector implements Iterator<Integer> {
     private final LinkedList<Iterator<Integer>> q = new LinkedList<>();
     
-    public Vector2D(List<List<Integer>> vec2d) {
+    public Flatten2DVector(List<List<Integer>> vec2d) {
         for (List<Integer> r : vec2d) {
             if (r == null) continue;
             

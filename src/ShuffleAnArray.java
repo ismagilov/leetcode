@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Random;
+
 /**
 * https://leetcode.com/problems/shuffle-an-array/description/
 */
@@ -5,7 +8,7 @@ public class ShuffleAnArray {
     private final int[] original;
     private final Random r = new Random();
     
-    public Solution(int[] nums) {
+    public ShuffleAnArray(int[] nums) {
         original = Arrays.copyOf(nums, nums.length);
     }
     

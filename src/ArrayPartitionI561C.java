@@ -3,7 +3,7 @@
 *
 * Use counting sort.
 */
-public class ArrayPartitionI {
+public class ArrayPartitionI561C {
     public int arrayPairSum(int[] nums) {
         int[] sorted = new int [20001];
         

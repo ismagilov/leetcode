@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 /**
 * https://leetcode.com/problems/number-of-islands/discuss/
 *

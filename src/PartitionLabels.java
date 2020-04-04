@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
 * https://leetcode.com/contest/weekly-contest-67/problems/partition-labels/
 */

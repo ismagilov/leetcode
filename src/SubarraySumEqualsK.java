@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 /**
 * https://leetcode.com/problems/subarray-sum-equals-k/description/
 */

@@ -8,7 +8,7 @@ public class DesignCompressedStringIterator {
     private char ch;
     private int cnt;
     
-    public StringIterator(String compressedString) {
+    public DesignCompressedStringIterator(String compressedString) {
         compressed = compressedString.toCharArray();
         p = 0;
     }

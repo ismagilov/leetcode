@@ -3,8 +3,8 @@
 *
 * Using sorted array.
 */
-class Solution {
-    fun arrayPairSum(nums: IntArray): Int = nums.asSequence().sorted().filterIndexed { idx, num ->
+class ArrayPartitionI561B {
+    fun arrayPairSum(nums: IntArray): Int = nums.asSequence().sorted().filterIndexed { idx, _ ->
             idx % 2 == 0
         }.sum()
 }

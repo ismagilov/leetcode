@@ -1,3 +1,7 @@
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 /**
 * https://leetcode.com/problems/find-median-from-data-stream/description/
 */
@@ -6,12 +10,12 @@ public class FindMedianFromDataStream {
     private Queue<Integer> rightMin = new PriorityQueue<>();
 
     /** initialize your data structure here. */
-    public MedianFinder() {
+    public FindMedianFromDataStream() {
     }
     
     public void addNum(int num) {
         leftMax.offer(num);
-        rightMax.offer(leftMax.poll());
+        rightMin.offer(leftMax.poll());
         
         if (rightMin.size() > leftMax.size())
             leftMax.offer(rightMin.poll());

@@ -3,7 +3,7 @@
 *
 * Counting sort, iterate hash array, accumulate sum taking into account odd/even number of occurences
 */
-class Solution {
+class ArrayPartitionI561A {
     fun arrayPairSum(nums: IntArray): Int {
         val hash = IntArray(20001)
         

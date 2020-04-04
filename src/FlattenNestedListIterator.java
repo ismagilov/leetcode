@@ -1,3 +1,9 @@
+import lib.NestedInteger;
+
+import java.util.ArrayDeque;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * https://leetcode.com/problems/flatten-nested-list-iterator/description/
  *
@@ -21,7 +27,7 @@ public class FlattenNestedListIterator implements Iterator<Integer> {
     private final ArrayDeque<Iterator<NestedInteger>> s = new ArrayDeque<>();
     private NestedInteger nextInt;
     
-    public NestedIterator(List<NestedInteger> nestedList) {
+    public FlattenNestedListIterator(List<NestedInteger> nestedList) {
         if (null != nestedList)
             s.push(nestedList.iterator());
     }

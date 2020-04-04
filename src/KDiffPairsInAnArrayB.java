@@ -1,4 +1,4 @@
-import java.util.HashSet;
+import java.util.Arrays;
 
 /**
 * https://leetcode.com/problems/k-diff-pairs-in-an-array/#/description

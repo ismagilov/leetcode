@@ -1,3 +1,5 @@
+import lib.ListNode;
+
 /**
  * https://leetcode.com/problems/palindrome-linked-list/description/
  *
