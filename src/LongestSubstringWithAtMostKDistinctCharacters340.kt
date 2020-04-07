@@ -47,7 +47,34 @@ class LongestSubstringWithAtMostKDistinctCharacters340 {
 
         return maxLength
     }
+
+    /**
+     * Sliding window and removing the most left char if number of distinct chars exceeds.
+     * Use linked hash map for getting the most left character with O(1) time.
+     */
+    fun lengthOfLongestSubstringKDistinct3(s: String, k: Int): Int {
+        var start = 0
+
+        var maxLength = 0
+        val uniqueCharsLastIdx = linkedMapOf<Char, Int>()
+        for (end in s.indices) {
+            if (uniqueCharsLastIdx.containsKey(s[end]))
+                uniqueCharsLastIdx.remove(s[end])
+            uniqueCharsLastIdx[s[end]] = end
+
+            if (uniqueCharsLastIdx.size == k + 1) {
+                val leftIdx = uniqueCharsLastIdx.entries.first().value
+                uniqueCharsLastIdx.remove(s[leftIdx])
+                start = leftIdx + 1
+            }
+
+            maxLength = max(end - start + 1, maxLength)
+        }
+
+        return maxLength
+    }
 }
 
 fun main() {
+    println(LongestSubstringWithAtMostKDistinctCharacters340().lengthOfLongestSubstringKDistinct3("abaccc", 2))
 }
