@@ -1,3 +1,6 @@
+/**
+ * https://leetcode.com/problems/perform-string-shifts/
+ */
 class PerformStringShifts1427 {
     fun stringShift(s: String, shift: Array<IntArray>): String {
         var left = 0

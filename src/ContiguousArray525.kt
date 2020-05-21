@@ -1,5 +1,8 @@
 import kotlin.math.max
 
+/**
+ * https://leetcode.com/problems/contiguous-array/submissions/
+ */
 class ContiguousArray525 {
     fun findMaxLength(nums: IntArray): Int {
         var maxLength = 0
