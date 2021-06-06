@@ -37,7 +37,7 @@ class LongestSubstringWithAtMostKDistinctCharacters340 {
             uniqueCharsLastIdx[s[end]] = end
 
             if (uniqueCharsLastIdx.size == k + 1) {
-                val left = uniqueCharsLastIdx.values.min() ?: throw IllegalStateException()
+                val left = uniqueCharsLastIdx.values.minOrNull() ?: throw IllegalStateException()
                 uniqueCharsLastIdx.remove(s[left])
                 start = left + 1
             }

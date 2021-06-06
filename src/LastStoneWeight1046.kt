@@ -21,7 +21,7 @@ class LastStoneWeight1046 {
     }
 
     fun lastStoneWeightB(stones: IntArray): Int {
-        var maxWeight = stones.max() ?: 0
+        var maxWeight = stones.maxOrNull() ?: 0
         val buckets = IntArray(maxWeight + 1)
 
         for (stoneWeight in stones)
