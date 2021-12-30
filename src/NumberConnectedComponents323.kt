@@ -1,3 +1,5 @@
+import java.util.ArrayDeque
+
 /**
  * https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/submissions/
  *
@@ -56,7 +58,7 @@ class NumberConnectedComponents323Dfs {
 
     fun countComponents(n: Int, edges: Array<IntArray>): Int {
         visited = BooleanArray(n) { false }
-        edgesLists = Array(n) { mutableListOf() }
+        edgesLists = Array(n) { mutableListOf<Int>() }
 
         for (e in edges) {
             edgesLists[e[0]].add(e[1])
@@ -92,7 +94,7 @@ class NumberConnectedComponents323Bfs {
 
     fun countComponents(n: Int, edges: Array<IntArray>): Int {
         visited = BooleanArray(n) { false }
-        edgesLists = Array(n) { mutableListOf() }
+        edgesLists = Array(n) { mutableListOf<Int>() }
 
         for (e in edges) {
             edgesLists[e[0]].add(e[1])

@@ -20,7 +20,7 @@ class PaintHouse256 {
             prevRow = curRow
         }
 
-        return prevRow.minOrNull() ?: 0
+        return prevRow.min() ?: 0
     }
 }
 
