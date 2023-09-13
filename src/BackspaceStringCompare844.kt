@@ -58,9 +58,58 @@ class BackspaceStringCompare844 {
 
         return i
     }
+
+    fun backspaceCompareC(s: String, t: String): Boolean {
+        fun erased(s: String): ArrayDeque<Char> {
+            val stack = ArrayDeque<Char>()
+
+            for (c in s) {
+                if (c == '#' && stack.isNotEmpty())
+                    stack.removeFirst()
+                else if (c != '#')
+                    stack.addFirst(c)
+            }
+
+            return stack
+        }
+
+        return erased(s) == erased(t)
+    }
+
+    fun backspaceCompareD(s: String, t: String): Boolean {
+        var i = s.length - 1
+        var j = t.length - 1
+
+        while (i >= 0 || j >= 0) {
+            var skipI = 0
+            while (i >= 0) {
+                if (s[i] == '#') { skipI++; i-- }
+                else if (skipI > 0) { skipI--; i-- }
+                else { break }
+            }
+
+            var skipJ = 0
+            while (j >= 0) {
+                if (t[j] == '#') { skipJ++; j-- }
+                else if (skipJ > 0) { skipJ--; j-- }
+                else { break }
+            }
+
+            if (i >= 0 && j >= 0 && s[i] != t[j]) return false
+            if ((i >= 0) != (j >= 0)) return false // "ab##" "abc#"
+
+            i--; j--
+        }
+
+        return true
+    }
 }
 
 fun main() {
-    println(BackspaceStringCompare844().backspaceCompareB("xywrrmp", "xywrrmu#p"))
+    println(BackspaceStringCompare844().backspaceCompareD("p", "pb#"))
+    println(BackspaceStringCompare844().backspaceCompareD("xywrrmp", "xywrrmu#p"))
+    println(BackspaceStringCompare844().backspaceCompareD("###c", "#c#c"))
+    println(BackspaceStringCompare844().backspaceCompareD("abc", "def"))
+    println(BackspaceStringCompare844().backspaceCompareD("ab#c", "acdef###"))
 }
 
