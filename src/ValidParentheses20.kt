@@ -9,7 +9,7 @@ class ValidParentheses20 {
                 try {
                     val top = q.removeFirst()
                     if ((top == '(' && cur != ')') || (top == '{' && cur != '}') || (top == '[' && cur != ']'))
-                        return false;
+                        return false
                 } catch (e: NoSuchElementException) {
                     return false
                 }
@@ -18,11 +18,34 @@ class ValidParentheses20 {
 
         return q.isEmpty()
     }
+
+    fun isValidB(s: String): Boolean {
+        val q = ArrayDeque<Char>()
+        val pairs = mapOf(')' to '(', '}' to '{', ']' to '[')
+        val openPars = pairs.values.toSet()
+
+        for (c in s) {
+            if (c in openPars) {
+                q.addFirst(c)
+            } else if (q.isNotEmpty()) {
+                if (q.first() != pairs[c]) {
+                    return false
+                } else {
+                    q.removeFirst()
+                }
+            } else {
+                return false
+            }
+        }
+
+        return q.isEmpty()
+    }
 }
 
 fun main() {
-    println(ValidParentheses20().isValid("[()]"))
-    println(ValidParentheses20().isValid("[()]"))
-    println(ValidParentheses20().isValid("{}(([]))"))
-    println(ValidParentheses20().isValid("{}(([])]"))
+    println(ValidParentheses20().isValidB("[()]"))
+    println(ValidParentheses20().isValidB("[()]"))
+    println(ValidParentheses20().isValidB("{}(([]))"))
+    println(ValidParentheses20().isValidB("{}(([])]"))
+    println(ValidParentheses20().isValidB("}(([])]"))
 }
