@@ -6,9 +6,7 @@ class FirstBadVersion278 {
             val mid = b + (e - b) / 2L
 
             when (isBadVersion(mid.toInt())) {
-                true -> {
-                    e = mid
-                }
+                true -> e = mid
                 false -> b = mid
             }
         }
