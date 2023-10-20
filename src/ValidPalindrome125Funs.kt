@@ -1,7 +1,7 @@
 /**
  * https://leetcode.com/problems/valid-palindrome
  */
-class ValidPalindrome125 {
+class ValidPalindrome125Funs {
     fun isPalindrome(s: String): Boolean {
         val res = s.toLowerCase().filter { it.isLetterOrDigit() }
 
