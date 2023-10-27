@@ -32,11 +32,24 @@ class ContainsDuplicate217 {
     fun containsDuplicateC(nums: IntArray): Boolean {
         return nums.toSet().size != nums.size
     }
+
+    fun containsDuplicateD(nums: IntArray): Boolean {
+        val s = mutableSetOf<Int>()
+
+        for (n in nums) {
+            when (s.add(n)) {
+                true -> continue
+                else -> return true
+            }
+        }
+
+        return false
+    }
 }
 
 fun main() {
-    println(ContainsDuplicate217().containsDuplicateA(intArrayOf(9, 0, 0)))
-    println(ContainsDuplicate217().containsDuplicateA(intArrayOf(9)))
-    println(ContainsDuplicate217().containsDuplicateA(intArrayOf(9, 99, 7, 6)))
+    println(ContainsDuplicate217().containsDuplicateD(intArrayOf(9, 0, 0)))
+    println(ContainsDuplicate217().containsDuplicateD(intArrayOf(9)))
+    println(ContainsDuplicate217().containsDuplicateD(intArrayOf(9, 99, 7, 6)))
 }
 
