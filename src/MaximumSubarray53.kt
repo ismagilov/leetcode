@@ -62,12 +62,40 @@ class MaximumSubarray53 {
 
         return leftMax + rightMax
     }
+
+    fun maxSubArrayC(nums: IntArray): Int {
+        var max = Int.MIN_VALUE
+        for (i in nums.indices) {
+            var subMax = 0
+            for (j in i..<nums.size) {
+                subMax += nums[j]
+                max = max(max, subMax)
+            }
+        }
+
+        return max
+    }
+
+    fun maxSubArrayD(nums: IntArray): Int {
+        var cur = nums[0]
+        var max = nums[0]
+
+        for (i in 1 until nums.size) {
+            cur = max(cur + nums[i], nums[i])
+            max = max(max, cur)
+        }
+
+        return max
+    }
 }
 
 fun main() {
+    val s = MaximumSubarray53()
+
     // println(MaximumSubarray53().maxSubArrayB(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4)))
     // println(MaximumSubarray53().maxSubArrayB(intArrayOf(-2)))
     // println(MaximumSubarray53().maxSubArrayB(intArrayOf(-2, 6)))
     // println(MaximumSubarray53().maxSubArrayB(intArrayOf(-2, 6, -5)))
-    println(MaximumSubarray53().maxSubArrayB(intArrayOf(-2, -1)))
+//    println(MaximumSubarray53().maxSubArrayB(intArrayOf(-2, -1)))
+    println(s.maxSubArrayD(intArrayOf(5, 4, -1, 7, 8)))
 }
