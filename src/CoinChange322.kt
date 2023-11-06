@@ -34,7 +34,7 @@ class CoinChange322 {
     5  2  2  1
     6  3  2  -
      */
-    fun coinChange(coins: IntArray, amount: Int): Int {
+    fun coinChangeBottomToTop(coins: IntArray, amount: Int): Int {
         val dp = IntArray(amount + 1) { Int.MAX_VALUE }
         dp[0] = 0
 
@@ -70,5 +70,5 @@ fun main() {
     2  1
     3  -
      */
-    println(s.coinChange(intArrayOf(2), 3))
+    println(s.coinChangeBottomToTop(intArrayOf(2), 3))
 }
