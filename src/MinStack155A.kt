@@ -1,9 +1,10 @@
 import java.util.LinkedList
+import kotlin.math.min
 
 /**
  * https://leetcode.com/problems/min-stack/
  */
-class MinStack155 {
+class MinStack155A {
     private val values = LinkedList<Int>()
     private val mins = LinkedList<CountedMin>()
     private var min: Int = Int.MAX_VALUE
@@ -41,8 +42,36 @@ class MinStack155 {
 
 private data class CountedMin(val value: Int, var counter: Int = 1)
 
+class MinStackMinInSameStack() {
+    val q = ArrayDeque<Entity>()
+
+    fun push(`val`: Int) {
+        if (q.isEmpty()) {
+            q.addFirst(Entity(`val`, `val`))
+        } else {
+            val newMin = min(q.first().min, `val`)
+
+            q.addFirst(Entity(`val`, newMin))
+        }
+    }
+
+    fun pop() {
+        q.removeFirstOrNull() ?: throw IllegalStateException()
+    }
+
+    fun top(): Int {
+        return q.firstOrNull()?.value ?: throw IllegalStateException()
+    }
+
+    fun getMin(): Int {
+        return q.firstOrNull()?.min ?: throw IllegalStateException()
+    }
+
+    data class Entity(val value: Int, val min: Int)
+}
+
 fun main() {
-    val minStack = MinStack155()
+    val minStack = MinStackMinInSameStack()
 
     minStack.push(-2)
     minStack.push(0)
@@ -53,5 +82,5 @@ fun main() {
     println(minStack.getMin()) // return -2
     minStack.pop()
     minStack.pop()
-    println(minStack.getMin()) // return MAX_VAL
+//    println(minStack.getMin()) // return MAX_VAL
 }
